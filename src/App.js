@@ -8,15 +8,18 @@ import Project from './Component/Project/Project'
 import Other from './Component/Other/Other'
 function App() {
   return (
-    <div>
+    <div style={{height:"100%"}}>
         <BrowserRouter>
           <NavBar />
-          <Routes>
-            <Route path='/' element={<Home/>}></Route>
-            <Route path='/About' element={<About/>}></Route>
-            <Route path='/Project' element={<Project/>}></Route>
-            <Route path='/Other' element={<Other/>}></Route>
-          </Routes>
+          <div style={{height:"calc(100% - 80px)",backgroundColor: "#6daddb",
+backgroundImage: "linear-gradient(315deg, #6daddb 0%, #7A7ADB 74%)", paddingLeft: "5px"}}>
+            <Routes>
+              <Route path='/' element={<Home/>}></Route>
+              <Route path='/About' element={<About/>}></Route>
+              <Route path='/Project' element={<Project/>}></Route>
+              <Route path='/Other' element={<Other/>}></Route>
+            </Routes>
+          </div>
         </BrowserRouter>
       </div>
   );
