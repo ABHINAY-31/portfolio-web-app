@@ -10,7 +10,9 @@ function App() {
   return (
     <div style={{height:"100%"}}>
         <BrowserRouter>
-          <NavBar />
+          <div className="my-nav" style={{display:"flex", justifyContent:"center", padding:"5px"}}>
+            <NavBar />
+          </div>
           <div style={{height:"calc(100% - 80px)",backgroundColor: "#6daddb",
 backgroundImage: "linear-gradient(315deg, #6daddb 0%, #7A7ADB 74%)", paddingLeft: "5px"}}>
             <Routes>
@@ -20,6 +22,7 @@ backgroundImage: "linear-gradient(315deg, #6daddb 0%, #7A7ADB 74%)", paddingLeft
               <Route path='/Other' element={<Other/>}></Route>
             </Routes>
           </div>
+
         </BrowserRouter>
       </div>
   );

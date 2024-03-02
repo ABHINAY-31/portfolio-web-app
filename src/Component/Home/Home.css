@@ -1,4 +1,8 @@
 .fade-in-image{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+    z-index: 1;
     animation: fadeIn 5s;
     -webkit-animation: fadeIn 5s;
     -moz-animation: fadeIn 5s;
@@ -7,7 +11,10 @@
     position: relative;
     transition: ease-in 5s;
 }
-
+.fade-in-image > img{
+    /* border: 2px solid red; */
+    border-radius: 25% 5px 25%;
+}
 @keyframes fadeIn {
     0% { 
         opacity: 0; 
@@ -40,6 +47,7 @@
 }
 
 .about-me{
+    backdrop-filter: blur(10px);
     animation: fadeText 5s;
     position: relative;
 }
@@ -47,14 +55,17 @@
     0% { 
         opacity: 0; 
         right: -100px;
+        backdrop-filter: blur(10px);
     }
     100% { 
         opacity: 1;
         right: 0; 
+        backdrop-filter: blur(10px);
     }
 }
 
 .pattern{
+    width: 110px;
     animation: transform-val 5s;
 }
 @keyframes transform-val{
@@ -64,10 +75,32 @@
 }
 
 .content{
+    height: 400px;
+    width: 400px;
+    display: grid;
+    place-content: center;
+    padding: 20px;
+    z-index: 1;
     border: 2px solid black;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    font-size: 1.1em;
+    color: purple;
+    /* font-size: 1.1em; */
     text-align: center;
     /* overflow-y: auto; */
+}
+
+.photo-link{
+    width: 50%;
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+.about-me{
+    width: 50%;
+    display: grid;
+    place-content: center;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
 }
