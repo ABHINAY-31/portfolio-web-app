@@ -7,6 +7,7 @@
     border-radius: 20px;
     background: #000c66;
     color: white;
+    position: relative;
     /* margin: 5px; */
     /* padding-right: 5px; */
     /* margin-left: 20px; */
@@ -22,6 +23,34 @@
 .text > p{
     text-align: center;
 }
+
+.new-nav-option{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.new-nav-option a {
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 500;
+    color: white;
+    padding: 5px;
+    animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+    0% { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+
+.new-nav-option a.active {
+    text-decoration: underline;
+}
+
 .nav-options{
     width: 60%;
     display: flex;
@@ -46,6 +75,51 @@
 }
 
 .nav-options a.active {
-    /* color: purple; */
     text-decoration: underline;
+}
+.click{
+    display: none;
+}
+
+@media (max-width: 770px){
+    .text{
+        justify-content: left;
+    }
+    .nav-options{
+        flex-direction: column;
+        width: 100%;
+        height: 300px;
+        background-color: #000c66;
+        z-index: 2;
+        animation: fadeOut 4s;
+        transition: all 4s;
+        border-radius: 4px;
+    }
+    @keyframes fadeOut{
+        0%{
+            width: 0;
+            height: 0;
+        }
+        100%{
+            width: 100%;
+            height: 300px;
+        }
+    }
+    .new-nav-option{
+        width: 0;
+        height: 0;
+        animation: faderemove 4s;
+        border-radius: 4px;
+        transition: all 4s;
+    }
+    .new-nav-option > a{
+        display: none;
+    }
+    .click{
+        position: absolute;
+        z-index: 3;
+        right: 4px;
+        top: 30px;
+        display: block;
+    }
 }
