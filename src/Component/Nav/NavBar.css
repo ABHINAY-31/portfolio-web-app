@@ -8,10 +8,6 @@
     background: #000c66;
     color: white;
     position: relative;
-    /* margin: 5px; */
-    /* padding-right: 5px; */
-    /* margin-left: 20px; */
-    /* margin-right: 40px; */
 }
 .text{
     font-size: 19px;
@@ -29,6 +25,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 3;
+    position: relative;
 }
 .new-nav-option a {
     text-decoration: none;
@@ -56,6 +54,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 3;
+    position: relative;
 }
 .nav-options a {
     text-decoration: none;
@@ -91,11 +91,11 @@
         height: 300px;
         background-color: #000c66;
         z-index: 2;
-        animation: fadeOut 4s;
+        animation: gayo 4s;
         transition: all 4s;
         border-radius: 4px;
     }
-    @keyframes fadeOut{
+    @keyframes gayo{
         0%{
             width: 0;
             height: 0;

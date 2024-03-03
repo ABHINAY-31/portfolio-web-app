@@ -1,0 +1,64 @@
+.cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card{
+    width: 300px;
+    height: 400px;
+    border: 2px solid green;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 5px 5px 30px 1px;
+    transition: all 5s;
+    overflow:hidden;
+    animation: fadeIn 3s;
+    transition: all 3s;
+    position: relative;
+}
+@keyframes fadeIn{
+    0%{
+        left: -100px;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+.card1{
+    position: relative;
+    animation: fadeUp 3s;
+}
+@keyframes fadeUp{
+    0%{
+        top: -100px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.card2{
+    position: relative;
+    animation: faderight 3s;
+}
+@keyframes faderight{
+    0%{
+        right: -100px;
+        opacity: 0;
+    }
+    100%{
+        right: 0;
+        opacity: 1;
+    }
+}
+
+
+.card:hover{
+    background-color: aquamarine;
+}
