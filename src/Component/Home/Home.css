@@ -12,17 +12,24 @@
     transition: ease-in 5s;
 }
 .fade-in-image > img{
+    animation: fadeIn 5s;
     /* border: 2px solid red; */
     border-radius: 25% 5px 25%;
+    width: 350px;
+    height: 350px;
 }
 @keyframes fadeIn {
     0% { 
         opacity: 0; 
         left: -100px;
+        border-radius: 50%;
+        /* overflow: hidden; */
     }
     100% { 
         opacity: 1;
         left: 0; 
+        border-radius: 25% 5px 25%;
+        /* overflow: hidden; */
     }
 }
 
@@ -50,6 +57,7 @@
     backdrop-filter: blur(10px);
     animation: fadeText 5s;
     position: relative;
+    /* overflow: hidden; */
 }
 @keyframes fadeText {
     0% { 
@@ -74,6 +82,21 @@
     }
 }
 
+.photo-link{
+    width: 50%;
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+.about-me{
+    width: 50%;
+    display: grid;
+    place-content: center;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+}
+
 .content{
     height: 400px;
     width: 400px;
@@ -90,17 +113,73 @@
     /* overflow-y: auto; */
 }
 
-.photo-link{
-    width: 50%;
-    display: grid;
-    place-content: center;
+.skills{
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.MySkills{
+    height: max-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skill-box{
+    width: 65px;
+    height: 65px;
+    border: 2px solid black;
+    border-radius: 8px; 
+    box-shadow: 0 0 2px 2px; 
+    transition: transform 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fadeIn 5s;
     position: relative;
 }
-.about-me{
-    width: 50%;
-    display: grid;
-    place-content: center;
-    padding: 50px;
-    position: relative;
-    z-index: 1;
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+        left: -100px;
+    }
+    100% { 
+        opacity: 1;
+        left: 0; 
+    }
+}
+
+
+
+.skill-box:hover {
+    cursor: pointer;
+    transform: scale(1.1); 
+    box-shadow: 0 0 4px 2px; 
+
+}
+@media (max-width:770px){
+    .fade-in-image > img{
+        width:"90%";
+    }
+
+    .back-image{
+        height: fit-content;
+        flex-direction: column;
+        /* overflow: hidden; */
+    }
+    .about-me{
+        width:100%;
+    }
+    .content{
+        width: 350px;
+        border: 2px solid black;
+        font-size: 19px;
+        backdrop-filter: blur(10px);
+    }
+    .photo-link{
+        width:100%;
+    }
 }

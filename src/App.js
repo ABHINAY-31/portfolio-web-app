@@ -13,8 +13,7 @@ function App() {
           <div className="my-nav" style={{display:"flex", justifyContent:"center", padding:"5px"}}>
             <NavBar />
           </div>
-          <div style={{height:"calc(100% - 80px)",backgroundColor: "#6daddb",
-backgroundImage: "linear-gradient(315deg, #6daddb 0%, #7A7ADB 74%)", paddingLeft: "5px"}}>
+          <div style={{}}>
             <Routes>
               <Route path='/' element={<Home/>}></Route>
               <Route path='/About' element={<About/>}></Route>
